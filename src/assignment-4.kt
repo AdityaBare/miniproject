@@ -15,7 +15,7 @@ class Car(var make:String,var model:String,var year:Int,var mileage:Double)
 }
 fun main()
 {
-    val c1=Car("Toyota","Corolla",2015,60000.0)
+    val c1=Car("XUE 300","XUE 700",2023,60000.0)
     println("Initial Details :")
     c1.details()
     c1.drive(150.0)
