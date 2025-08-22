@@ -5,7 +5,7 @@ fun main() {
 
     if (score > 90) {
         println("Excellent")
-    } else if (score >= 75) {
+    } else if  (score >= 75) {
         println("Good")
     } else if (score >= 50) {
         println("Pass")
