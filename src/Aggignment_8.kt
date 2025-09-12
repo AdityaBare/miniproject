@@ -1,7 +1,7 @@
 import java.util.Scanner
 
 fun main(args: Array<String>) {
-    val sc = Scanner(System.in)
+    val sc = Scanner(System.`in`)
     var cond: String
     do {
         var i = 10
