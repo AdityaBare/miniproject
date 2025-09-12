@@ -1,50 +1,27 @@
-// Step 2 & 3: Person class with primary constructor
-class Person(val name: String, val age: Int) {
-    // Step 4: Init block
-    init {
-        println("Welcome, $name! 🎉")
-    }
-    // Step 5: Function to display info
-    fun displayInfo() {
-        println("Person → Name: $name, Age: $age")
-    }
-}
-// Step 6: Employee class
-class Employee(val name: String, val employeeId: Int) {
-    // Step 7: Secondary constructor with default employeeIdconstructor(name: String) : this(name, 0)
-// Step 8: Function to show details
-    fun showDetails() {
-        println("Employee → Name: $name, ID: $employeeId")
-    }
-}
-// Step 9 & 10: Car class
-class Car(val model: String) {
-    var year: Int = 0
-    // Step 11: Init block
-    init {
-        println("Car object created → Model: $model")
-    }
-    // Secondary constructor
-    constructor(model: String, year: Int) : this(model) {
-        this.year = year
-    }
-    fun showCarDetails() {
-        println("Car → Model: $model, Year: $year")
-    }
-}
+
+data class Student(val name: String, val age: Int, val company: String)
 fun main() {
-// Step 12: Create and print details
-// One Person object
-    val person = Person("Adi", 22)
-    person.displayInfo()
-// Two Employee objects
-    val emp1 = Employee("Om", 101) // primary constructor
-    val emp2 = Employee("ram") // secondary constructor
-    emp1.showDetails()
-    emp2.showDetails()
-// Two Car objects
-    val car1 = Car("Tesla") // primary constructor
-    val car2 = Car("BMW", 2023) // secondary constructor
-    car1.showCarDetails()
-    car2.showCarDetails()
+    val students = listOf(
+        Student("Nilesh", 19, "Infosys"),
+        Student("vaibhav", 20, "TCS"),
+        Student("Karan", 21, "Wipro"),
+        Student("Varad", 22, "Capgemini"),
+        Student("Shubham", 23, "Accenture")
+    )
+    println("Immutable List: $students")
+    val mutableStudents = mutableListOf("Anushka", "Ravi", "Meera", "Amit", "Pooja")
+    mutableStudents.add("Nilesh")
+    mutableStudents.add("vaibhav")
+    mutableStudents[1] = "Karan"
+    mutableStudents.remove("varad")
+    println("Element at index 2: ${mutableStudents[2]}")
+    println("Using for loop:")
+    for (name in mutableStudents) {
+        println(name)
+    }
+    println("Using iterator:")
+    val iterator = mutableStudents.iterator()
+    while (iterator.hasNext()) {
+        println(iterator.next())
+    }
 }

@@ -2,10 +2,10 @@
 data class Student(val name: String, val age: Int, val company: String)
 fun main() {
     val students = listOf(
-        Student("Nilesh", 19, "Infosys"),
-        Student("vaibhav", 20, "TCS"),
+        Student("Aditya", 19, "Infosys"),
+        Student("om", 20, "TCS"),
         Student("Karan", 21, "Wipro"),
-        Student("Varad", 22, "Capgemini"),
+        Student("ram", 22, "Capgemini"),
         Student("Shubham", 23, "Accenture")
     )
     println("Immutable List: $students")
