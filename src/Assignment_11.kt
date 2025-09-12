@@ -10,7 +10,7 @@ class Person(val name: String, val age: Int) {
     }
 }
 fun main() {
-    val person1 = Person("Sarika", 22)
+    val person1 = Person("Om", 22)
     person1.displayInfo()
     val person2 = Person("Aditya", 19)
     person2.displayInfo()
